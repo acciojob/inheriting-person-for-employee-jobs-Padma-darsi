@@ -1,17 +1,17 @@
 // complete this js code
 // Person class definition
+// Person class definition
 function Person(name, age) {
   this.name = name;
   this.age = age;
 }
 
 Person.prototype.greet = function () {
-  console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+  console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
 };
 
-// Employee class definition (inherits from Person)
+// Employee class definition
 function Employee(name, age, jobTitle) {
-  // Call the parent constructor
   Person.call(this, name, age);
   this.jobTitle = jobTitle;
 }
@@ -21,9 +21,7 @@ Employee.prototype = Object.create(Person.prototype);
 Employee.prototype.constructor = Employee;
 
 Employee.prototype.jobGreet = function () {
-  console.log(
-    `Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`
-  );
+  console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
 };
 
 // Do not change code below this line
